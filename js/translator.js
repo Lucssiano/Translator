@@ -1,7 +1,4 @@
 // Forma de simplificar los selectores para no escribirlos cada vez que se necesiten
-// function $(selector) {
-// 	return document.querySelector(selector);
-// }
 function $$(selector) {
 	return document.querySelectorAll(selector);
 }
