@@ -3,9 +3,6 @@ import Translator from './translator.js';
 function $(selector) {
 	return document.querySelector(selector);
 }
-function $$(selector) {
-	return document.querySelectorAll(selector);
-}
 
 let translator = new Translator({
 	langSelected: '',

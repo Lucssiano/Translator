@@ -1,13 +1,11 @@
 // Forma de simplificar los selectores para no escribirlos cada vez que se necesiten
-// function $(selector) {
-// 	return document.querySelector(selector);
-// }
 function $$(selector) {
 	return document.querySelectorAll(selector);
 }
 
 class Translator {
 	constructor() {
+		/* Elementos que se traducirán */
 		this._elements = $$('[data-i18n]');
 		this._spanishChanges = {
 			body: {
@@ -29,10 +27,12 @@ class Translator {
 				paragraph: 'How are you?',
 			},
 		};
+		/* Acá se pueden ir agregando los distintos lenguajes */
 	}
 
 	changeLanguage(lang) {
 		let finalLang;
+		/* Dependiendo del lenguaje , se le asignará a finalLang el objeto de dicho lenguaje */
 		switch (lang) {
 			case 'es':
 				finalLang = this._spanishChanges;
@@ -43,6 +43,7 @@ class Translator {
 			default:
 				console.error("Sorry , we can't translate the page");
 		}
+		/* Recorrido por los elementos que se quieren traducir , y se reemplaza el texto anterior por el que se quiere traducir */
 		this._elements.forEach((element) => {
 			let text = element.dataset.i18n.split('.').reduce((obj, i) => obj[i], finalLang);
 			if (text) {
