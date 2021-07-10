@@ -16,7 +16,7 @@ class Translator {
 			},
 			secondBody: {
 				title: 'Hola',
-				paragraph: 'Pene',
+				paragraph: 'Como estás?',
 			},
 		};
 		this._englishChanges = {
@@ -26,7 +26,7 @@ class Translator {
 			},
 			secondBody: {
 				title: 'Hello',
-				paragraph: 'Dick',
+				paragraph: 'How are you?',
 			},
 		};
 	}
@@ -54,6 +54,7 @@ class Translator {
 
 export default Translator;
 
+// --- Forma de traductor sin la class , por lo tanto no se puede exportar a muchos archivos --- //
 // const elements = $$('[data-i18n]');
 
 // const spanishChanges = {
@@ -105,3 +106,5 @@ export default Translator;
 // 		spanishButton.classList.remove('active');
 // 	}
 // });
+
+// ----------------------------------------------------------------------- //
