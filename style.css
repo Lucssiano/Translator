@@ -1,0 +1,19 @@
+/* CHANGE LANGUAGES SECTION */
+body {
+    background-color: black;
+    color: white;
+}
+.change-language {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.change-language button {
+	margin: 0 2rem;
+	background-color: black;
+    color: white;
+}
+.change-language button.active {
+	box-shadow: 0 0 1.2rem -0.2rem white;
+}
+/* ###################### */
