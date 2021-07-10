@@ -30,6 +30,7 @@ class Translator {
 		/* Acá se pueden ir agregando los distintos lenguajes */
 	}
 
+	/* Función que se llama desde main.js con el lenguaje seleccionado , el cual se ingresa como parámetro en esta función */
 	changeLanguage(lang) {
 		let finalLang;
 		/* Dependiendo del lenguaje , se le asignará a finalLang el objeto de dicho lenguaje */
