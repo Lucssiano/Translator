@@ -1,5 +1,6 @@
 import Translator from './translator.js';
-// Forma de simplificar los selectores para no escribirlos cada vez que se necesiten
+
+/* A way to simplify the selectors to avoid writing them every time i need it */
 function $(selector) {
 	return document.querySelector(selector);
 }
@@ -12,6 +13,7 @@ const spanishButton = $('button.language.spanish');
 const englishButton = $('button.language.english');
 
 spanishButton.addEventListener('click', () => {
+	/* The language is selected */
 	translator.langSelected = 'es';
     translator.changeLanguage(translator.langSelected);
 	if (!spanishButton.classList.contains('active')) {
@@ -20,6 +22,7 @@ spanishButton.addEventListener('click', () => {
 	}
 });
 englishButton.addEventListener('click', () => {
+	/* The language is selected */
 	translator.langSelected = 'en';
     translator.changeLanguage(translator.langSelected);
 	if (!englishButton.classList.contains('active')) {
